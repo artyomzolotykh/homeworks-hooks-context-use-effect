@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
 import './App.css';
+import Details from './components/Details';
+import List from './components/List';
 
 function App() {
+  const [detailItem, setDetailItem] = useState('');
+  const [actualCardId, setActualCardId] = useState('');
+
+  const url = `https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hooks-context/use-effect/data/${actualCardId}.json`;
+
+  const handleActualCard = id => {
+    setActualCardId(id);
+  }
+
+  const fetchDetailItem = () => fetch(url)
+    .then(response => response.json())
+    .then(data => setDetailItem(data));
+
+  useEffect(() => {
+    if (actualCardId) fetchDetailItem();
+  }, [actualCardId]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <List handleActualCard={handleActualCard} actualId={actualCardId} />
+      {detailItem ? <Details detailItem={detailItem} /> : ''}
     </div>
   );
 }
