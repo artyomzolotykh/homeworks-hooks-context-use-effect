@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/homeworks-hooks-context-use-effect/static/css/main.2292f13a.chunk.css",
-    "main.js": "/homeworks-hooks-context-use-effect/static/js/main.02e56b67.chunk.js",
-    "main.js.map": "/homeworks-hooks-context-use-effect/static/js/main.02e56b67.chunk.js.map",
-    "runtime-main.js": "/homeworks-hooks-context-use-effect/static/js/runtime-main.308ca87a.js",
-    "runtime-main.js.map": "/homeworks-hooks-context-use-effect/static/js/runtime-main.308ca87a.js.map",
-    "static/js/2.3cd750ca.chunk.js": "/homeworks-hooks-context-use-effect/static/js/2.3cd750ca.chunk.js",
-    "static/js/2.3cd750ca.chunk.js.map": "/homeworks-hooks-context-use-effect/static/js/2.3cd750ca.chunk.js.map",
-    "static/js/3.3ec41436.chunk.js": "/homeworks-hooks-context-use-effect/static/js/3.3ec41436.chunk.js",
-    "static/js/3.3ec41436.chunk.js.map": "/homeworks-hooks-context-use-effect/static/js/3.3ec41436.chunk.js.map",
+    "main.js": "/homeworks-hooks-context-use-effect/static/js/main.e002eea3.chunk.js",
+    "main.js.map": "/homeworks-hooks-context-use-effect/static/js/main.e002eea3.chunk.js.map",
+    "runtime-main.js": "/homeworks-hooks-context-use-effect/static/js/runtime-main.7e511236.js",
+    "runtime-main.js.map": "/homeworks-hooks-context-use-effect/static/js/runtime-main.7e511236.js.map",
+    "static/js/2.5302e294.chunk.js": "/homeworks-hooks-context-use-effect/static/js/2.5302e294.chunk.js",
+    "static/js/2.5302e294.chunk.js.map": "/homeworks-hooks-context-use-effect/static/js/2.5302e294.chunk.js.map",
+    "static/js/3.31a13072.chunk.js": "/homeworks-hooks-context-use-effect/static/js/3.31a13072.chunk.js",
+    "static/js/3.31a13072.chunk.js.map": "/homeworks-hooks-context-use-effect/static/js/3.31a13072.chunk.js.map",
     "index.html": "/homeworks-hooks-context-use-effect/index.html",
     "static/css/main.2292f13a.chunk.css.map": "/homeworks-hooks-context-use-effect/static/css/main.2292f13a.chunk.css.map",
-    "static/js/2.3cd750ca.chunk.js.LICENSE.txt": "/homeworks-hooks-context-use-effect/static/js/2.3cd750ca.chunk.js.LICENSE.txt"
+    "static/js/2.5302e294.chunk.js.LICENSE.txt": "/homeworks-hooks-context-use-effect/static/js/2.5302e294.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.308ca87a.js",
-    "static/js/2.3cd750ca.chunk.js",
+    "static/js/runtime-main.7e511236.js",
+    "static/js/2.5302e294.chunk.js",
     "static/css/main.2292f13a.chunk.css",
-    "static/js/main.02e56b67.chunk.js"
+    "static/js/main.e002eea3.chunk.js"
   ]
 }
