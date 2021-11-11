@@ -6,6 +6,8 @@ import List from './components/List';
 function App() {
   const [detailItem, setDetailItem] = useState('');
   const [actualCardId, setActualCardId] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [hasError, setError] = useState(null);
 
   const url = `https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hooks-context/use-effect/data/${actualCardId}.json`;
 
@@ -13,9 +15,22 @@ function App() {
     setActualCardId(id);
   }
 
-  const fetchDetailItem = () => fetch(url)
-    .then(response => response.json())
-    .then(data => setDetailItem(data));
+  const fetchDetailItem = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
+      const data = await response.json();
+      setDetailItem(data);
+      setError(false);
+    } catch (e) {
+      setError(e);
+    } finally {
+      setLoading(false);
+    }
+  }
 
   useEffect(() => {
     if (actualCardId) fetchDetailItem();
@@ -24,7 +39,9 @@ function App() {
   return (
     <div className="App">
       <List handleActualCard={handleActualCard} actualId={actualCardId} />
-      {detailItem ? <Details detailItem={detailItem} /> : ''}
+      {hasError && <p style={{color: 'red'}}>Error Details</p>}
+      {loading && !hasError && <p>Loading...</p>}
+      {detailItem && !loading && <Details detailItem={detailItem} />}
     </div>
   );
 }
